@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hipertensi_app/app/core/helper/constant.dart';
 import 'package:hipertensi_app/app/modules/home/views/k1_view.dart';
+import 'package:hipertensi_app/app/modules/home/views/k3_view.dart';
 import 'package:hipertensi_app/app/widgets/my_header.dart';
 
 import '../controllers/home_controller.dart';
@@ -29,6 +30,30 @@ class HomeView extends GetView<HomeController> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: InkWell(
+                      onTap: (){},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            // Image.asset(image),
+                            Icon(Icons.volunteer_activism_rounded, size: 42, color: kDeathColor),
+                            SizedBox(width: 20),
+                            Expanded(
+                                child: Text('Pengertian Hipertensi',
+                                    style: kSubTextStyle.copyWith(
+                                        fontWeight: FontWeight.bold))),
+                            Icon(Icons.arrow_right_alt_rounded, color: kPrimaryColor)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
                   Text(
                     "Ketegori",
                     style: kTitleTextstyle.copyWith(color: kPrimaryColor),
@@ -45,7 +70,7 @@ class HomeView extends GetView<HomeController> {
                       title: 'Hipertensi Tingkat I'),
                   SizedBox(height: 10),
                   _kategory_card(
-                      onTap: () {},
+                      onTap: () => Get.to(() => K3View()),
                       image: "assets/images/fever.png",
                       title: 'Hipertensi Tingkat II'),
                   SizedBox(height: 10),
