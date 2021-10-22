@@ -11,7 +11,7 @@ class K3View extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: kPrimaryColor),
-        elevation: 0.2,
+        elevation: 0.8,
         centerTitle: false,
         backgroundColor: Colors.grey[50],
         title: Text('Hipertensi tingkat II', style: kTitleTextstyle),

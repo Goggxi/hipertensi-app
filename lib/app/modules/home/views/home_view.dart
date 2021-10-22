@@ -6,6 +6,7 @@ import 'package:hipertensi_app/app/modules/home/views/hipertensi_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/k1_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/k3_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/k4_view.dart';
+import 'package:hipertensi_app/app/modules/home/views/kuisioner1_view.dart';
 import 'package:hipertensi_app/app/widgets/my_header.dart';
 
 import '../controllers/home_controller.dart';
@@ -43,13 +44,15 @@ class HomeView extends GetView<HomeController> {
                         child: Row(
                           children: [
                             // Image.asset(image),
-                            Icon(Icons.volunteer_activism_rounded, size: 42, color: kDeathColor),
+                            Icon(Icons.volunteer_activism_rounded,
+                                size: 42, color: kDeathColor),
                             SizedBox(width: 20),
                             Expanded(
                                 child: Text('Pengertian Hipertensi',
                                     style: kSubTextStyle.copyWith(
                                         fontWeight: FontWeight.bold))),
-                            Icon(Icons.arrow_right_alt_rounded, color: kPrimaryColor)
+                            Icon(Icons.arrow_right_alt_rounded,
+                                color: kPrimaryColor)
                           ],
                         ),
                       ),
@@ -80,6 +83,143 @@ class HomeView extends GetView<HomeController> {
                       onTap: () => Get.to(() => K4View()),
                       image: "assets/images/headache.png",
                       title: 'Hipertensi Krisis'),
+                  SizedBox(height: 10),
+                  Text(
+                    "Kuisioner",
+                    style: kTitleTextstyle.copyWith(color: kPrimaryColor),
+                  ),
+                  SizedBox(height: 10),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: InkWell(
+                      onTap: () => Get.to(() => Kuisioner1View()),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          // crossAxisAlignment: CrossAxisAlignment.start,
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            // Icon(
+                            //   Icons.wysiwyg,
+                            //   size: 52,
+                            //   // color: kInfectedColor,
+                            // ),
+                            // SizedBox(width: 20),
+                            Expanded(
+                                child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text('Kuisioner 1',
+                                      style: kSubTextStyle.copyWith(
+                                          // color: kInfectedColor,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                Row(
+                                  children: [
+                                    // SizedBox(width: 60),
+                                    Icon(
+                                      Icons.topic,
+                                      color: kTextLightColor,
+                                    ),
+                                    SizedBox(width: 10),
+                                    Expanded(
+                                        child: Text('4 Topik',
+                                            style: kSubTextStyle.copyWith(
+                                                color: kTextLightColor)))
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    // SizedBox(width: 60),
+                                    Icon(
+                                      Icons.note,
+                                      color: kTextLightColor,
+                                    ),
+                                    SizedBox(width: 10),
+                                    Expanded(
+                                        child: Text('29 Pertanyaan',
+                                            style: kSubTextStyle.copyWith(
+                                                color: kTextLightColor)))
+                                  ],
+                                ),
+                              ],
+                            )),
+                            Icon(Icons.arrow_right_alt_rounded,
+                                color: kPrimaryColor)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          // crossAxisAlignment: CrossAxisAlignment.start,
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            // Icon(
+                            //   Icons.wysiwyg,
+                            //   size: 52,
+                            //   // color: kInfectedColor,
+                            // ),
+                            // SizedBox(width: 20),
+                            Expanded(
+                                child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text('Kuisioner 2',
+                                      style: kSubTextStyle.copyWith(
+                                          // color: kInfectedColor,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                Row(
+                                  children: [
+                                    // SizedBox(width: 60),
+                                    Icon(
+                                      Icons.topic,
+                                      color: kTextLightColor,
+                                    ),
+                                    SizedBox(width: 10),
+                                    Expanded(
+                                        child: Text('2 Topik',
+                                            style: kSubTextStyle.copyWith(
+                                                color: kTextLightColor)))
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    // SizedBox(width: 60),
+                                    Icon(
+                                      Icons.note,
+                                      color: kTextLightColor,
+                                    ),
+                                    SizedBox(width: 10),
+                                    Expanded(
+                                        child: Text('27 Pertanyaan',
+                                            style: kSubTextStyle.copyWith(
+                                                color: kTextLightColor)))
+                                  ],
+                                ),
+                              ],
+                            )),
+                            Icon(Icons.arrow_right_alt_rounded,
+                                color: kPrimaryColor)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                   SizedBox(height: 20),
                 ],
               ),

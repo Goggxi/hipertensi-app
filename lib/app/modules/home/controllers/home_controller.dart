@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+   static HomeController get instance => Get.find<HomeController>();
   final controller = ScrollController();
   final offset = 0.0.obs;
 
