@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hipertensi_app/app/core/helper/bullet.dart';
 import 'package:hipertensi_app/app/core/helper/constant.dart';
 import 'package:hipertensi_app/app/modules/home/controllers/kuisioner1_controller.dart';
 import 'package:hipertensi_app/app/widgets/textformfield.dart';
@@ -113,14 +114,61 @@ class Kuisioner1View extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
-                                  Text(
-                                      'Saya menggunakan gadget setiap memiliki waktu luang.'),
-                                  Column(
+                                  NumberList([
+                                    'Saya menggunakan gadget setiap memiliki waktu luang.'
+                                  ]),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      addRadioButton(0, "Selalu"),
-                                      addRadioButton(1, "Sering"),
-                                      addRadioButton(2, "Jarang"),
-                                      addRadioButton(3, "Tidak Pernah"),
+                                      Text(
+                                        'Tidak Pernah',
+                                        style: kSubTextStyle,
+                                      ),
+                                      addRadioButton(0, ''),
+                                      addRadioButton(1, ''),
+                                      addRadioButton(2, ''),
+                                      addRadioButton(3, ''),
+                                      Text(
+                                        'Selalu',
+                                        style: kSubTextStyle,
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8),
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Saya menggunakan gadget setiap memiliki waktu luang.',
+                                    style: kSubTextStyle,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Tidak Pernah',
+                                        style: kSubTextStyle,
+                                      ),
+                                      addRadioButton(0, ''),
+                                      addRadioButton(1, ''),
+                                      addRadioButton(2, ''),
+                                      addRadioButton(3, ''),
+                                      Text(
+                                        'Selalu',
+                                        style: kSubTextStyle,
+                                      ),
                                     ],
                                   )
                                 ],

@@ -7,6 +7,7 @@ import 'package:hipertensi_app/app/modules/home/views/k1_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/k3_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/k4_view.dart';
 import 'package:hipertensi_app/app/modules/home/views/kuisioner1_view.dart';
+import 'package:hipertensi_app/app/modules/home/views/kuisioner2_view.dart';
 import 'package:hipertensi_app/app/widgets/my_header.dart';
 
 import '../controllers/home_controller.dart';
@@ -160,7 +161,7 @@ class HomeView extends GetView<HomeController> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () => Get.to(() => Kuisioner2View()),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
